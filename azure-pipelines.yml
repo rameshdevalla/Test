@@ -25,10 +25,10 @@ steps:
   inputs:
     SourceFolder: '$(build.repository.localPath)'
     Contents: '**'
-    TargetFolder: '$(BUILD_ARTIFACTSTAGINGDIRECTORY)' 
+    TargetFolder: '$(build.artifactstagingdirectory)' 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(BUILD_ARTIFACTSTAGINGDIRECTORY)'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
    
