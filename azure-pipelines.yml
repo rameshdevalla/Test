@@ -23,7 +23,7 @@ steps:
   displayName: 'Run a multi-line script' 
 - task: CopyFiles@2 
   inputs:
-    SourceFolder: '$(BUILD_REPOSITORY_LOCALPATH)'
+    SourceFolder: '$(build.repository.localPath)'
     Contents: '**'
     TargetFolder: '$(BUILD_ARTIFACTSTAGINGDIRECTORY)' 
 - task: PublishBuildArtifacts@1
